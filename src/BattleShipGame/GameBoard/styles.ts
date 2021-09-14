@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Colors, MOBILE_WIDTH } from '../constants'
+import { Colors, MOBILE_WIDTH, SizeCell, COUNT_CELLS } from '../constants'
 
 export const MainGameViewWrapper = styled.div`
   height: 100%;
@@ -57,4 +57,15 @@ export const ShipStateImg = styled.img`
   border: 2px solid ${Colors.cellBorder};
   width: 20px;
   height: 20px;
+`
+export const FieldWrapper = styled.div`
+  margin: 10px;
+  grid-template-columns: repeat(${COUNT_CELLS}, ${SizeCell.desktop}px);
+  grid-template-rows: repeat(${COUNT_CELLS}, ${SizeCell.desktop}px);
+  display: grid;
+  @media (max-width: ${MOBILE_WIDTH}px) {
+    grid-template-columns: repeat(${COUNT_CELLS}, ${SizeCell.mobile}px);
+    grid-template-rows: repeat(${COUNT_CELLS}, ${SizeCell.mobile}px);
+    justify-content: center;
+  }
 `

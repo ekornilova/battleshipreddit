@@ -4,6 +4,7 @@ import { layoutData } from '../settings'
 import { ActionType } from '../types'
 import { ShipDeskWrapper, MainGameViewWrapper, RestartBtn } from './styles'
 import ShipDesk from './ShipDesk'
+import GameBoard from './GameBoard'
 
 const MainGameView: React.FC = () => {
   const { dispatch } = useBattleShipState()
@@ -20,6 +21,7 @@ const MainGameView: React.FC = () => {
   }, [fillDefaultBoard])
   return (
     <MainGameViewWrapper>
+      <GameBoard />
       <ShipDeskWrapper>
         <ShipDesk />
         <RestartBtn onClick={fillDefaultBoard}>Restart Game</RestartBtn>
