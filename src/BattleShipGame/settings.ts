@@ -2,7 +2,7 @@ import { LayoutType, ShipType } from './types'
 
 export const layoutData: LayoutType = {
   shipTypes: {
-    carrier: { size: 5, count: 2 },
+    carrier: { size: 5, count: 1 },
     battleship: { size: 4, count: 1 },
     cruiser: { size: 3, count: 1 },
     submarine: { size: 3, count: 1 },
@@ -17,16 +17,6 @@ export const layoutData: LayoutType = {
         [4, 9],
         [5, 9],
         [6, 9],
-      ],
-    },
-    {
-      ship: ShipType.carrier,
-      positions: [
-        [9, 9],
-        [9, 8],
-        [9, 7],
-        [9, 6],
-        [9, 5],
       ],
     },
     {
