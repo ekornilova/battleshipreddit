@@ -48,6 +48,7 @@ export const TableWrapper = styled.div`
   align-items: center;
   grid-auto-rows: 60px;
   justify-items: center;
+  margin-bottom: 5px;
 `
 export const LineWrapper = styled.div`
   display: flex;
@@ -68,4 +69,34 @@ export const FieldWrapper = styled.div`
     grid-template-rows: repeat(${COUNT_CELLS}, ${SizeCell.mobile}px);
     justify-content: center;
   }
+`
+export const ModalMessage = styled.div`
+  position: fixed;
+  background: ${Colors.backgroundColor};
+  z-index: 99;
+  top: 40%;
+  left: 40%;
+  width: 25%;
+  height: 90px;
+  border: 2px solid ${Colors.cellBorder};
+  display: flex;
+  flex-direction: column;
+  border-radius: 40px;
+  align-items: end;
+  @media (max-width: ${MOBILE_WIDTH}px) {
+    width: 65%;
+    left: 15%;
+  }
+}
+`
+export const ModalBackGround = styled.div`
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
 `
