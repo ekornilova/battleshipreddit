@@ -27,3 +27,34 @@ export const RestartBtn = styled.button`
   font-weight: bold;
   height: 30px;
 `
+type TextAttr = {
+  isBold?: boolean
+  size?: number
+}
+export const Text = styled.div`
+  ${(props: TextAttr) => props.isBold && `font-weight: bold;`}
+  font-size: ${(props: TextAttr) => props.size || 16}px;
+  align-self: center;
+  color: ${Colors.textColor};
+`
+
+export const ShipImg = styled.img`
+  width: 100px;
+  height: 60px;
+`
+export const TableWrapper = styled.div`
+  display: grid;
+  grid-template-columns: 40% 20% 30%;
+  align-items: center;
+  grid-auto-rows: 60px;
+  justify-items: center;
+`
+export const LineWrapper = styled.div`
+  display: flex;
+`
+export const ShipStateImg = styled.img`
+  margin-left: 5px;
+  border: 2px solid ${Colors.cellBorder};
+  width: 20px;
+  height: 20px;
+`
